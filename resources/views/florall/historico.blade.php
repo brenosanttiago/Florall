@@ -41,6 +41,8 @@
         <input class="form-control" type="search" name="termo" placeholder="Digite sua pesquisa" aria-label="Search" value="{{ $termo ?? '' }}">
 </form></div>
 </div>
+<a class="ms-3" href="/index"><img src="img/camera.png" alt="..." width="70" height="70"></a>
+<img id="botaoCor" src="/img/lua.png" alt="Lua" onclick="alterarCor()" width="40" height="40">
 
          <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class PlantController extends Controller
 {
   
+    
     public function edit($plants){
 
         $user = Auth::user();

@@ -1,46 +1,51 @@
 @extends('app')
+
 <link rel="icon" type="image/x-icon" href="/img/iconebolinha.png">
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
 <a class="ms-3" href="/"><img src="img/florallpng.png" alt="..." width="125" height="30"></a>
+
     <div class="container d-flex justify-content-evenly camera">
         
         
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
             
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav me-auto nav-underline">
           <li class="nav-item">
-          <a class="nav-link " href="/biblioteca">Biblioteca</a>
+          <a class="nav-link " href="/biblioteca"style="color:#3CB371">Biblioteca</a>
          </li>
          </ul>
 
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav me-auto nav-underline">
           <li class="nav-item">
-          <a class="nav-link" href="/minhasplantas">Minhas Plantas</a>
+          <a class="nav-link" href="/minhasplantas" style="color:#3CB371">Minhas Plantas</a>
          </li>
          </ul>
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav me-auto nav-underline">
           <li class="nav-item">
-          <a class="nav-link" href="/historico">Histórico</a>
+          <a class="nav-link" href="/historico"style="color:#3CB371">Histórico</a>
          </li>
          </ul>
 
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav me-auto nav-underline">
           <li class="nav-item">
-          <a class="nav-link" href="/duvidas">Dúvidas</a>
+          <a class="nav-link" href="/duvidas"style="color:#3CB371">Dúvidas</a>
          </li>
          </ul>
 
          
 
          <div class="row g-3">
-  <div class="col-sm-20">
+  <div class="col-sm-20" style="margin-top:30px">
   <form action="{{ route('pesquisar') }}" method="GET">
-        <input class="form-control" type="search" name="termo" placeholder="Digite sua pesquisa" aria-label="Search" value="{{ $termo ?? '' }}">
+        <input class="form-control" type="search" name="termo" placeholder="Digite sua pesquisa" aria-label="Search" value="{{ $termo ?? '' }}" style="color:#3CB371">
 </form></div>
 </div>
+
+<a class="ms-3" href="/index"><img src="img/camera.png" alt="..." width="70" height="70"></a>
+<img id="botaoCor" src="/img/lua.png" alt="Lua" onclick="alterarCor()" width="40" height="40">
 
          <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
@@ -85,6 +90,7 @@
 <br>
 <br>
 
+
 <h1 class="title">TODAS AS PLANTAS</h1>
 
 <br>
@@ -118,5 +124,5 @@
    
 </div>
 
-
+</body>
 @endsection

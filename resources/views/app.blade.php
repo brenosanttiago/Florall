@@ -86,6 +86,16 @@
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+
+    body.cor-preto {
+    background-color: black;
+    color: white;
+}
+
+body.cor-branco {
+    background-color: white;
+    color: black;
+}
     </style>
 </head>
 <body>
@@ -110,7 +120,28 @@
 
     // Oculta a tela de carregamento após 3000 milissegundos (3 segundos)
     setTimeout(hideLoadingOverlay, 3000);
+
 </script>
+
+<script>
+    function alterarCor() {
+        var body = document.body;
+        var imagemBotao = document.getElementById('botaoCor');
+
+        if (body.classList.contains('cor-preto')) {
+            body.classList.remove('cor-preto');
+            body.classList.add('cor-branco');
+            imagemBotao.src = '/img/lua.png';
+            imagemBotao.alt = 'Sol';
+        } else {
+            body.classList.remove('cor-branco');
+            body.classList.add('cor-preto');
+            imagemBotao.src = '/img/sol.png';
+            imagemBotao.alt = 'Sol';
+        }
+    }
+</script>
+
 
     
 </body>

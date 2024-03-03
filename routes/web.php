@@ -63,7 +63,6 @@ Route::get('/duvidas', function () {
 Route::get('/index', [PlantController::class, 'index'])->name('plant.index');
 Route::post('/identify', [PlantController::class, 'identify'])->name('plant.identify');
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
